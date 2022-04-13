@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/04/12 21:31:15.000.561,=C:\Users\shina\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/04/12 21:33:16.000.509,C:\Users\shina\Documents\JogoDelphi\UnitMenu.fmx=C:\Users\shina\Documents\Embarcadero\Studio\Projects\Unit2.fmx</Transaction>
+    <Transaction>2022/04/12 21:33:16.000.509,C:\Users\shina\Documents\JogoDelphi\UnitMenu.pas=C:\Users\shina\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/04/12 21:33:38.000.109,C:\Users\shina\Documents\JogoDelphi\numeros.dproj=C:\Users\shina\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2022/04/12 22:16:56.000.444,=C:\Users\shina\Documents\JogoDelphi\Unit1.pas</Transaction>
+    <Transaction>2022/04/12 22:18:11.000.740,C:\Users\shina\Documents\JogoDelphi\UnitPrincipal.fmx=C:\Users\shina\Documents\JogoDelphi\Unit1.fmx</Transaction>
+    <Transaction>2022/04/12 22:18:11.000.740,C:\Users\shina\Documents\JogoDelphi\UnitPrincipal.pas=C:\Users\shina\Documents\JogoDelphi\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>
