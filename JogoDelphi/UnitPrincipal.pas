@@ -20,47 +20,54 @@ type
     lblLevel: TLabel;
     GridLayout: TGridLayout;
     Rectangle1: TRectangle;
-    Label2: TLabel;
+    lblQuadrado1: TLabel;
     Rectangle2: TRectangle;
-    Label4: TLabel;
+    lblQuadrado2: TLabel;
     Rectangle3: TRectangle;
-    Label5: TLabel;
+    lblQuadrado3: TLabel;
     Rectangle4: TRectangle;
-    Label6: TLabel;
+    lblQuadrado4: TLabel;
     Rectangle5: TRectangle;
-    Label7: TLabel;
+    lblQuadrado5: TLabel;
     Rectangle6: TRectangle;
-    Label8: TLabel;
+    lblQuadrado6: TLabel;
     Rectangle7: TRectangle;
-    Label9: TLabel;
+    lblQuadrado7: TLabel;
     Rectangle8: TRectangle;
-    Label10: TLabel;
+    lblQuadrado8: TLabel;
     Rectangle9: TRectangle;
-    Label11: TLabel;
+    lblQuadrado9: TLabel;
     Rectangle10: TRectangle;
-    Label12: TLabel;
+    lblQuadrado10: TLabel;
     Rectangle11: TRectangle;
-    Label13: TLabel;
+    lblQuadrado11: TLabel;
     Rectangle12: TRectangle;
-    Label14: TLabel;
+    lblQuadrado12: TLabel;
     Rectangle13: TRectangle;
-    Label15: TLabel;
+    lblQuadrado13: TLabel;
     Rectangle14: TRectangle;
-    Label16: TLabel;
+    lblQuadrado14: TLabel;
     Rectangle15: TRectangle;
-    Label17: TLabel;
+    lblQuadrado15: TLabel;
     Rectangle16: TRectangle;
-    Label18: TLabel;
+    lblQuadrado16: TLabel;
     Rectangle17: TRectangle;
-    Label19: TLabel;
+    lblQuadrado17: TLabel;
     Rectangle18: TRectangle;
-    Label20: TLabel;
+    lblQuadrado18: TLabel;
     Rectangle19: TRectangle;
-    Label21: TLabel;
+    lblQuadrado19: TLabel;
     Rectangle20: TRectangle;
-    Label22: TLabel;
+    lblQuadrado20: TLabel;
     procedure RectVoltarClick(Sender: TObject);
+    procedure lblQuadrado1DragDrop(Sender: TObject; const Data: TDragObject;
+      const Point: TPointF);
+    procedure lblQuadrado1DragOver(Sender: TObject; const Data: TDragObject;
+      const Point: TPointF; var Operation: TDragOperation);
+    procedure FormShow(Sender: TObject);
   private
+    procedure SomarPontos(pontos: integer);
+    procedure Reset;
     { Private declarations }
   public
     { Public declarations }
@@ -72,6 +79,47 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TFrmPrincipal.Reset;
+begin
+  lblPlacar.Text := '0';
+  lblLevel.Text := '1';
+end;
+
+
+procedure TFrmPrincipal.SomarPontos(pontos : integer);
+begin
+  lblPlacar.Text := IntToStr(lblPlacar.Text.ToInteger + pontos);
+end;
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+   Reset;
+end;
+
+procedure TFrmPrincipal.lblQuadrado1DragDrop(Sender: TObject; const Data: TDragObject;
+  const Point: TPointF);
+var
+  lblOrigem, lblDestino : TLabel;
+begin
+  lblDestino := TLabel(Sender);
+  lblOrigem := TLabel(Data.Source);
+
+  if (lblDestino.Text <> '') and (lblOrigem.Text <> '') then
+  begin
+  lblDestino.Text := IntToStr(lblDestino.Text.ToInteger + lblOrigem.Text.ToInteger);
+  lblOrigem.Text := '' ;
+
+  SomarPontos(lblDestino.Text.ToInteger);
+  end;
+
+end;
+
+procedure TFrmPrincipal.lblQuadrado1DragOver(Sender: TObject;
+  const Data: TDragObject; const Point: TPointF; var Operation: TDragOperation);
+begin
+  Operation := TDragOperation.Move;
+end;
 
 procedure TFrmPrincipal.RectVoltarClick(Sender: TObject);
 begin
