@@ -10,6 +10,6 @@
     <Transaction>2022/04/12 22:18:11.000.740,C:\Users\shina\Documents\JogoDelphi\UnitPrincipal.pas=C:\Users\shina\Documents\JogoDelphi\Unit1.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5"/>
+		<NoProfile iOSSimulator="iPhone5" Android64="" Android="0068986886"/>
 	</ActiveMobileDevice>
 </BorlandProject>

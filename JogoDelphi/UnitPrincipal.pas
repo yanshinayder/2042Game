@@ -5,7 +5,13 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
-  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls;
+  FMX.Objects, FMX.Controls.Presentation,
+
+  {$IFDEF ANDROID}
+  Execute.FMXBasedDragDrop,
+  {$ENDIF}
+
+  FMX.StdCtrls;
 
 type
   TFrmPrincipal = class(TForm)
